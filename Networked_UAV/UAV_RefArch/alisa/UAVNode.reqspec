@@ -1,0 +1,29 @@
+system requirements uavNodeReqs for UAVNodeMain::UAVNodeM[
+	requirement DataCapture: "Data Capture"
+	[
+		description this "Each node should capture the data at a frame rate of 24fps"
+		rationale "Will lead to better static frames when computing the point cloud"
+		mitigates "Blurred frames"
+	]
+	requirement Navigation: "Navigation"
+	[
+		description this "Each node should be able to autonomously navigate to the assigned location"
+		rationale "Will help remove the need for any human intervention in the data collection process"
+		mitigates "Human effort"
+	]
+	requirement Weight : "UAV weight limit" [
+		val MaximumWeight = 3 kg
+		compute actualweight : real units SEI::WeightUnits 
+		description this "Should be within weight of " MaximumWeight 
+		value predicate actualweight <= MaximumWeight
+	]
+	requirement Response : "UAV sensor to actuator response time limit" [
+		val MaximumLatency = 30ms
+		val ExpectedLatencyRange = [10ms..30ms]
+		val ExpectedMaximumLatency = 20 ms
+		compute MinLatency : Time
+		compute MaxLatency : Time
+		description this "Shall have a sensor to actuator response time within " MaximumLatency
+		value predicate MaxLatency <= ExpectedMaximumLatency
+	]
+]

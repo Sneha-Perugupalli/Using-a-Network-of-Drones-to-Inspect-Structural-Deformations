@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="5c88b6ae-5456-4752-b0ef-791bc5199afb" manual="true">
+    <element uuid="47a9bbec-c195-4a72-b070-7df13c9ec13e">
+      <element uuid="e83e23f8-a0c2-4566-a0f8-fccdc551e06e">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>ntoc</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="c284d39e-a394-45ba-996e-4338f6a25e22">
+      <element uuid="725b6059-508b-4b9d-ab15-32dfcf60cb40" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>data_in</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="66a6ef1c-9f29-4887-890a-87fbe1ded25b" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>data_out</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_comm</seg>
+      </bo>
+      <position x="307.0" y="38.0"/>
+      <size width="274.0" height="110.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="50d8d77b-6db7-4390-a49c-e379e813022f">
+      <element uuid="16bdfbc7-a56e-46ba-aed4-54f59c42cf63" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>main_out</seg>
+        </bo>
+        <position x="198.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_node</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="275.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>refarchmain.impl</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="593.0" height="160.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>refmain::refarchmain.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

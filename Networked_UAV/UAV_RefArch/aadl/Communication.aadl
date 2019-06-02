@@ -1,0 +1,10 @@
+package Communication
+public
+	abstract CommunicationInterface
+		features
+			data_in: in event data port;
+			data_out: out event data port;
+	end CommunicationInterface;
+	abstract implementation CommunicationInterface.impl
+	end CommunicationInterface.impl;
+end Communication;

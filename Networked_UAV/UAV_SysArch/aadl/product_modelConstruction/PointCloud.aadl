@@ -1,0 +1,11 @@
+package PointCloud
+public
+	with UAVPC;
+	
+	-- defines what a point cloud data is ....	
+	data PointCloudData
+		properties
+			Data_Size => 1000 MByte;
+			UAVPC::DataPoints => 2000000;
+	end PointCloudData;
+end PointCloud;

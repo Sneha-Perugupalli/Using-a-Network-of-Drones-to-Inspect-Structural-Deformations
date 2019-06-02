@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="e6b132bd-2e17-48e7-9e35-1c411a0db468" manual="true">
+    <element uuid="c7aa9ace-a67b-43ec-aa5f-f6f78e448202">
+      <element uuid="a0827ac8-b733-42b6-92e8-3b115913e059">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>softtopcn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="b809aca1-c94c-40c7-9bba-8d416a71e27a">
+      <element uuid="ba5c03a0-8ff8-436e-a6cd-4866e785d705">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>uavtosoft</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="c375f409-42db-409d-8e3b-167e7a6cbda7">
+      <element uuid="794833e9-4b92-415c-bf9f-d7c5bb02419e" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>inport</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="0d7f717c-a9a4-4d8d-81e4-51b0bf6d7bd9" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>outport</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_comm</seg>
+      </bo>
+      <position x="587.0" y="38.0"/>
+      <size width="256.0" height="110.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="41006a45-c6f0-4553-9df2-9516d2ae5a0c">
+      <element uuid="2d127b3b-6b41-4b9c-b604-05f3275d0e37" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>inport</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="815a7a18-f33a-4e69-b81e-5c23a97aa82f" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="175.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_soft</seg>
+      </bo>
+      <position x="328.0" y="38.0"/>
+      <size width="239.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="7cd8e83a-e852-4c0a-a4a1-ee6f7da5c81e">
+      <element uuid="6e32997a-7289-4af6-8631-4b78a276f80c" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="232.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_uavnetwork</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="296.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>disastermanagementmain.impl</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="855.0" height="160.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>dm_main::disastermanagementmain.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

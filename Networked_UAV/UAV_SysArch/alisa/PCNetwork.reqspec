@@ -1,0 +1,17 @@
+system requirements PCNReqs for PointCloudNetwork::PCN [
+	requirement LargeScaleServices: "Large Scale Point clouds"
+	[
+		description this "Able to aggregate point clouds of huge spaces with up to 200k points at once"
+		rationale "Effectively capture 3D point cloud structure"
+	]
+	requirement ModelingDependencies: "Modeling Geometric Dependencies"
+	[
+		description this "Should be able to model local geometric dependencies"
+		rationale "To support powerful 2D segmentation methods"
+		mitigates "Processing of points in unstructured and unordered manner"
+	]
+	requirement TotalPointClouds: "Number of Point Clouds" [
+		val noPC = 200000
+		value predicate noPC < #UAVPC::MaxDataPoints
+	]
+]

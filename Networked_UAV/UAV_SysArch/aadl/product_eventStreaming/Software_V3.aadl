@@ -1,0 +1,62 @@
+package Software_V3
+public
+	with Software;
+	
+	process SoftSys extends Software::SoftSys
+		features
+			inPort: in data port;
+			outPort: out data port;
+	end SoftSys;
+
+	process implementation SoftSys.least extends Software::SoftSys.least
+		subcomponents
+			this_DV: refined to thread;
+			this_cameraAPI: subprogram CameraAPI;
+			this_LS: subprogram LiveStreamingAPI;
+			this_CC: subprogram Drone_Commmunication_Coordination;
+			this_GPS: subprogram GPS;			
+	end SoftSys.least;
+
+	thread DataValidator
+		properties
+			Stack_Size => 1000 Mbyte;
+			Period => 20ms;
+			Compute_Execution_Time => 8ms .. 10ms;
+	end DataValidator;	
+	
+	subprogram CameraAPI
+		properties
+			Stack_Size => 1000 Mbyte;
+			Compute_Execution_Time => 10ms .. 12ms;
+	end CameraAPI;
+
+	subprogram LiveStreamingAPI
+		properties
+			stack_size => 1000 Gbyte;
+			Compute_Execution_Time => 10ms .. 12ms;
+	end LiveStreamingAPI;
+	
+	subprogram Drone_Commmunication_Coordination
+		properties
+			Stack_Size => 2000 Mbyte;
+			Compute_Execution_Time => 15ms .. 20ms;
+	end Drone_Commmunication_Coordination;
+	
+	subprogram GPS
+		properties
+		Compute_Execution_Time => 15ms .. 20ms;
+	end GPS;
+
+	--- Implementation
+	thread implementation DataValidator.impl
+	end DataValidator.impl;	
+	subprogram implementation CameraAPI.impl
+	end CameraAPI.impl;
+	subprogram implementation LiveStreamingAPI.impl
+	end LiveStreamingAPI.impl;
+	subprogram implementation Drone_Commmunication_Coordination.impl
+	end Drone_Commmunication_Coordination.impl;
+	subprogram implementation GPS.impl
+	end GPS.impl;
+	
+end Software_V3;

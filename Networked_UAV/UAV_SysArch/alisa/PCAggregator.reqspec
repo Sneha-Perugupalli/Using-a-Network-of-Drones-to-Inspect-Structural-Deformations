@@ -1,0 +1,24 @@
+system requirements PCAReqs for PointCloudAggregator::PC_Agg [
+	requirement AggregateData: "Data Aggregation"
+	[
+		description this "Should be able to aggregate the spatial data collected by various UAVs"
+		rationale "3D model generator accepts only one point cloud"
+		mitigates "Inaccuracies during 3D model generation "
+	]
+	requirement FixedFrameAlignment: "Fixed frame and alignment"
+	[
+		description this "Should produce a point cloud that is fixed with respect to the map and aligned with the rest of the sensor"
+		rationale "A single point cloud in the fixed map frame with correct odometry"
+		mitigates "Irregular map and rotation"
+	]
+	requirement Transformation: "Transformation"
+	[
+		description this "Various point clouds should be collected, transformed, processed and aggregated"
+	]	
+	requirement Speed: "AggregationTime"
+	[
+		val aggregateTime = 100000 ms
+		value predicate aggregateTime < #UAVPC::AggregationTime
+		description this "To support critical tasks, Aggregation should be done within "
+	]	
+]

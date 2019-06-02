@@ -1,0 +1,10 @@
+property set UAVPC is
+	DataPoints: aadlinteger applies to (all);
+	MaxDataPoints: aadlinteger => 2000000000 applies to (all);
+	FrameRate: aadlinteger applies to (all);
+	MaxFrameRate: aadlinteger => 24 applies to (all);
+	MaxPointClouds: aadlinteger => 100 applies to (all);
+	InputTimeRate: type aadlinteger 50 ms .. 300 ms units time_units;
+	ComputationTime: type aadlinteger 60000 ms .. 240000 ms units time_units;
+	AggregationTime: UAVPC::ComputationTime applies to (all);
+end UAVPC;

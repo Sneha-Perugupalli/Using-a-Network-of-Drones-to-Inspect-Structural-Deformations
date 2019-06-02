@@ -1,0 +1,27 @@
+document UAVSystemGoals : "UAVSystemGoals" [
+	description "This document includes the stakeholder requirements for the entire UAV Model Construction System.
+	The system provides real time 3D model construction of any building using UAVs."
+	section SystemFunctionality : "System Functionality" [
+		goal g1: "Provide an accurate 3D model representation of any building"
+		[ description "The system should be able to model all the details of a building in 3D"
+		rationale "This will enable architects and engineers to study the various aspects of a building"
+		stakeholder UAVSystem.architect UAVSystem.engineer
+		]
+		goal g2: "Should be able to apply several post-processing effects" [
+			description "The system should allow modification of the rendered model by applying several post-processing effects"
+		stakeholder UAVSystem.dev1 UAVSystem.dev2 UAVSystem.architect UAVSystem.engineer
+		]
+	]
+	section NonfunctionalProperties : "Nonfunctional system requirements"
+	[
+		goal ng1 : "Speed" [
+			description "The system renders changes instantly within 1 minute"
+			rationale "There will be many post processing tasks involved"
+			stakeholder UAVSystem.dev1 UAVSystem.dev2
+		]
+		goal ng2: "Accuracy"[
+			description "The system should provide an accurate representation of the building"
+			stakeholder UAVSystem.dev1 UAVSystem.dev2
+		]
+	]
+] 

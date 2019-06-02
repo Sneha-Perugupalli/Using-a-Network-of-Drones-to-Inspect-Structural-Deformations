@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="d4037bae-0550-4f37-ab29-74b6fbb54316" manual="true">
+    <element uuid="804646d9-b61c-4cef-9244-b03f359c1446">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_dv</seg>
+      </bo>
+      <position x="68.0" y="137.0"/>
+      <size width="102.0" height="35.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="923b882a-512d-4c5a-a7ae-db7a76528f49">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_pcg</seg>
+      </bo>
+      <position x="68.0" y="90.0"/>
+      <size width="112.0" height="35.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="442f0b0a-b6ab-4f01-9ec1-b7171375b641" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>inport</seg>
+      </bo>
+      <position y="38.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="20428161-3f48-4ac3-9828-1e5ed7077f3a" dockArea="right">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>outport</seg>
+      </bo>
+      <position x="270.0" y="38.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="333cb3e0-4df7-48dc-8e82-42ac13b42a7d">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>flow_specification_instance</seg>
+        <seg>fpath</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw10_uav/uav_sysarch/aadl/product_modelconstruction/instances/software_v1_softsys_least_instance.aaxl2</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="334.0" height="184.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw10_uav/uav_sysarch/aadl/product_modelconstruction/instances/software_v1_softsys_least_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

@@ -1,0 +1,68 @@
+--- This system component represents the entire UAV Model Construction system
+--- The system essentially comprises of a network of drones trying to build a 
+--- 3D model of a building. 
+--- The system consists of the following sub-components:
+--- UAV Nodes - This sub-component includes the UAV Nodes themselves
+--- 			along with mounted 3D cameras and LinuxOS running on them
+--- SoftwareProcessing - A software component that is responsible for taking
+---						in the raw input from the UAVs, validating them
+---						and generating the corresponding point clouds
+--- Point Cloud Network - A collection of the generated point clouds
+--- Point Cloud Aggregator - A software component that takes in a collection
+---							of point clouds and aggregates them into 
+---							one single point cloud
+--- ThreeDModelGenerator - A software component that takes in the 
+---							aggregated point cloud and generates a
+---							3D mesh
+--- ThreeDMeshPostProcessor - Another software component that takes in
+---							the generated 3D mesh and performs post-processing
+---							tasks such as lighting correction
+
+--- References:
+--- http://etutorials.org/Programming/Software+architecture+in+practice,+second+edition/Part+Two+Creating+an+Architecture/Chapter+7.+Designing+the+Architecture/7.2+Designing+the+Architecture/
+--- https://uavcoach.com/applications-for-uavs-in-civil-engineering/
+--- https://arxiv.org/abs/1808.06840
+--- https://arxiv.org/abs/1711.09869
+--- https://answers.ros.org/question/28114/aggregating-point-clouds-in-fixed-frame/
+
+package UAV_ModelConstruction
+public
+	--- 'Importing' the subcomponent modules
+	with UAVNetwork_V1;
+	with Software_V1;
+	with PointCloudNetwork;
+	with PointCloudAggregator;
+	with ThreeDModelGenerator;
+	with ThreeDMesh;
+	
+	--- The system definition
+	system UAV_ModelConstructionSystem		
+	end UAV_ModelConstructionSystem;
+	
+	--- The system implementation
+	system implementation UAV_ModelConstructionSystem.impl
+		subcomponents
+			this_UAVNetwork: system UAVNetwork_V1::UAVNetworkC;
+			this_soft: process Software_V1::SoftSys;
+			this_PCN: process PointCloudNetwork::PCN;
+			this_PCA: process PointCloudAggregator::PC_Agg;
+			this_threeDModelGenerator: process ThreeDModelGenerator::ThreeDModelGeneratorC;
+			this_threeDModelPostProcess: process ThreeDMesh::ThreeDMeshModelPostProcessor;
+		connections
+			UAVToSoft: port this_UAVNetwork.outPort -> this_soft.inPort;
+			SoftToPCN: port this_soft.outPort -> this_PCN.inPort;
+			PCNToPCA: port this_PCN.outPort -> this_PCA.inPort;
+			PCAToModel: port this_PCA.outPort -> this_threeDModelGenerator.pointCloud_in;
+			threeDModelToPost: port this_threeDModelGenerator.model_out -> this_threeDModelPostProcess.result_in;
+		flows
+			f1: end to end flow this_PCN.fpath -> PCNToPCA -> this_PCA.fpath;
+			f2: end to end flow this_PCA.fpath -> PCAToModel -> this_threeDModelGenerator.fpath;
+		properties
+			latency => 1000ms..4000ms applies to f1;
+		annex resolute {**
+			prove minCompValue(this.this_PCN)
+			prove minCompValue(this.this_PCN)
+		**};
+	end UAV_ModelConstructionSystem.impl;
+	
+end UAV_ModelConstruction;

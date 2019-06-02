@@ -1,0 +1,10 @@
+package BaseStation
+public
+	system BaseStat
+		features
+			inPort: in event data port;
+			outPort: out event data port;
+	end BaseStat;
+	system implementation BaseStat.impl		
+	end BaseStat.impl;
+end BaseStation;

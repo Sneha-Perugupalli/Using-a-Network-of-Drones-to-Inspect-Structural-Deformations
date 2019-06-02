@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ASCII"?>
+<result:AnalysisResult xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:result="http://www.osate.org/result/Result" analysis="latency" message="SS-MF-DL-EQ">
+  <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#/"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787000"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
+  <results message="Latency results for f1" resultType="SUCCESS">
+    <values xsi:type="result:StringValue" value=""/>
+    <values xsi:type="result:RealValue" value="40.0"/>
+    <values xsi:type="result:RealValue" value="60.0"/>
+    <values xsi:type="result:RealValue" value="40.0"/>
+    <values xsi:type="result:RealValue" value="60.0"/>
+    <values xsi:type="result:RealValue" value="1000.0"/>
+    <values xsi:type="result:RealValue" value="4000.0"/>
+    <diagnostics diagnosticType="WARNING" message="Minimum specified flow latency total 40.0ms less than expected minimum end to end latency 1000.0ms (better response time)">
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@endToEndFlow.0"/>
+    </diagnostics>
+    <diagnostics diagnosticType="WARNING" message="Minimum actual latency total 40.0ms less than expected minimum end to end latency 1000.0ms (faster actual minimum response time)">
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@endToEndFlow.0"/>
+    </diagnostics>
+    <diagnostics diagnosticType="INFO" message="Maximum actual latency total 60.0ms is less or equal to expected maximum end to end latency 4000.0ms">
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@endToEndFlow.0"/>
+    </diagnostics>
+    <subResults>
+      <values xsi:type="result:RealValue" value="20.0"/>
+      <values xsi:type="result:RealValue" value="30.0"/>
+      <values xsi:type="result:RealValue" value="20.0"/>
+      <values xsi:type="result:RealValue" value="30.0"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@componentInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@connectionInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="20.0"/>
+      <values xsi:type="result:RealValue" value="30.0"/>
+      <values xsi:type="result:RealValue" value="20.0"/>
+      <values xsi:type="result:RealValue" value="30.0"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@componentInstance.2"/>
+    </subResults>
+    <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@endToEndFlow.0"/>
+  </results>
+  <results message="Latency results for f2" resultType="SUCCESS">
+    <values xsi:type="result:StringValue" value=""/>
+    <values xsi:type="result:RealValue" value="30.0"/>
+    <values xsi:type="result:RealValue" value="50.0"/>
+    <values xsi:type="result:RealValue" value="30.0"/>
+    <values xsi:type="result:RealValue" value="50.0"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue"/>
+    <diagnostics diagnosticType="WARNING" message="Expected end to end latency is not specified">
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@endToEndFlow.1"/>
+    </diagnostics>
+    <subResults>
+      <values xsi:type="result:RealValue" value="20.0"/>
+      <values xsi:type="result:RealValue" value="30.0"/>
+      <values xsi:type="result:RealValue" value="20.0"/>
+      <values xsi:type="result:RealValue" value="30.0"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@componentInstance.2"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <values xsi:type="result:StringValue" value="no latency"/>
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@connectionInstance.2"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="10.0"/>
+      <values xsi:type="result:RealValue" value="20.0"/>
+      <values xsi:type="result:RealValue" value="10.0"/>
+      <values xsi:type="result:RealValue" value="20.0"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <values xsi:type="result:StringValue" value="specified"/>
+      <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@componentInstance.3"/>
+    </subResults>
+    <modelElement href="../../UAV_ModelConstruction_UAV_ModelConstructionSystem_impl_Instance.aaxl2#//@endToEndFlow.1"/>
+  </results>
+</result:AnalysisResult>

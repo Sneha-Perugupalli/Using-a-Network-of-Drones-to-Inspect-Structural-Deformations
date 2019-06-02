@@ -1,0 +1,30 @@
+package UAVNode
+--- This model represents a single UAV Node
+--- A single node comprises of the UAV itself with the Linux OS running on it and 
+public
+	system UAVNodeComponent		
+	end UAVNodeComponent;
+	system implementation UAVNodeComponent.impl
+		subcomponents
+			this_uav: abstract UAV;
+			this_linuxOS: abstract LinuxOS;
+		connections
+			UAV_Linux: port this_uav.data_out->this_linuxOS.data_in;
+	end UAVNodeComponent.impl;	
+	--- ==================== device definitions ========================
+	abstract UAV
+		features
+			camera_in: in event data port;
+			data_out: out event data port;
+	end UAV;
+	abstract LinuxOS		
+		features
+			data_in: in event data port;			
+	end LinuxOS;
+	--- ==================== implementations ========================
+	abstract implementation UAV.impl		
+	end UAV.impl;
+	abstract implementation  LinuxOS.impl		
+	end LinuxOS.impl;
+	
+end UAVNode;

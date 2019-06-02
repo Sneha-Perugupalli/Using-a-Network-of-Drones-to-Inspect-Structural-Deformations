@@ -1,0 +1,20 @@
+system requirements threeDGenReqs for ThreeDModelGenerator::ThreeDModelGeneratorC [
+	requirement ModelGeneration: "3D model generation"
+	[
+		description this "Should be able to detect and match feature points to generate 3D model"
+		rationale "3D models would be used by engineers to inspect the building"
+		see goal UAVSystemGoals.g1
+	]
+	
+	requirement ErrorRate: "Error Rate"
+	[
+		description this "Acceptable error rate for measurements of point cloud based distances should be not more than +5 or -5"
+	]
+	requirement Visualization: "Visualization"
+	[
+		description this "Should provide a accurate visualizations and create a true to life model"
+	    rationale "Point cloud may be difficult to be viewed and analyzed by human eye"
+	    mitigates "Human error"
+	    see goal UAVSystemGoals.g2
+	]
+]

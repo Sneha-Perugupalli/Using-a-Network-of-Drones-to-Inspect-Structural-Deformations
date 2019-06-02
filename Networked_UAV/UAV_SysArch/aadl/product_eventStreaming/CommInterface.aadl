@@ -1,0 +1,11 @@
+package CommInterface
+public
+	process CommunicationInterface
+		features
+			inPort: in event data port;
+			outPort: out event data port;
+	end CommunicationInterface;
+
+	process implementation CommunicationInterface.impl
+	end CommunicationInterface.impl;
+end CommInterface;

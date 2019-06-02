@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="bb389f9d-9b07-479c-b36e-e407441cf480" manual="true">
+    <element uuid="c76d19a1-f57f-4b26-a101-0a8256b81de9">
+      <element uuid="8439c124-1ce4-47b3-b0e5-8c31d47726ae" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_in</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_linuxos</seg>
+      </bo>
+      <position x="693.0" y="38.0"/>
+      <size width="265.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="78dd9ec7-2f0c-4996-aaba-dfaa733e96a2">
+      <element uuid="740ba22c-b70a-4428-957f-72ea2240bc1a" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>camera_out</seg>
+        </bo>
+        <position x="271.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_threedcamera</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="364.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="46b3911f-3503-49f7-b88b-037afe3bd409">
+      <element uuid="f959edab-cbb2-433c-a5c6-a01c3e7a49f1" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>camera_in</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="ada67d57-4d16-4d9d-95c1-66dc749079b8" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_out</seg>
+        </bo>
+        <position x="204.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_uav</seg>
+      </bo>
+      <position x="396.0" y="38.0"/>
+      <size width="277.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="f659d185-f8fa-413d-9ce5-31627af331b6">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>camera_uav : uavnodecomponent_impl_instance.this_threedcamera.camera_out -> uavnodecomponent_impl_instance.this_uav.camera_in</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="ee5d1a7c-ac91-41a6-9770-5d92be85a2e2">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>uav_linux : uavnodecomponent_impl_instance.this_uav.data_out -> uavnodecomponent_impl_instance.this_linuxos.data_in</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw4_uav/models/instances/uavnode_uavnodecomponent_impl_instance.aaxl2</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="970.0" height="110.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw4_uav/models/instances/uavnode_uavnodecomponent_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

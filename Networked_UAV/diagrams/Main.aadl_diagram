@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="111abc13-e1f1-4412-94d6-b30d88f65e1b" manual="true">
+    <element uuid="5cdf0228-abdf-4a8b-a6df-c990be5377eb">
+      <element uuid="0bc4e936-9550-4f42-9d74-8da7674f6868" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>aggregationcompleted</seg>
+        </bo>
+        <position y="142.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="7a1ef856-73ac-49c7-bbd5-e90acc1a738a" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>inport</seg>
+        </bo>
+        <position y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="3c51b41b-a5b3-4774-afc3-7eec147c87ae" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>noofinputclouds</seg>
+        </bo>
+        <position y="90.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="d224d05e-290a-4d59-93dc-c5112ac28701" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="385.0" y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="fea8910d-6b3e-47f3-aac7-1bae2e42a409">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>fpath</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_pca</seg>
+      </bo>
+      <position x="835.0" y="38.0"/>
+      <size width="449.0" height="194.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="66996d61-a35b-407b-aa74-24d685f2e5d5">
+      <element uuid="6f19a710-7313-4a9c-9a61-1f7184dc77b5" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>inport</seg>
+        </bo>
+        <position y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="d87d204e-cf86-4ce1-a257-19e1e7387cf8" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="175.0" y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="eb1a4d73-7fe4-4351-9066-32f40daca9c8">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>fpath</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_pcn</seg>
+      </bo>
+      <position x="576.0" y="38.0"/>
+      <size width="239.0" height="90.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="7c47f1b0-4929-46fc-9a3e-cfaddfec4d31">
+      <element uuid="96ed6fe7-e69a-48c6-a0bc-92a5abdad84c" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>inport</seg>
+        </bo>
+        <position y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="2a92f03a-f0ed-43b7-ae1b-fa7fac6a6712" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="170.0" y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="03bc5cbd-be7d-4bb5-949d-e5a550745761">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>fpath</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_soft</seg>
+      </bo>
+      <position x="322.0" y="38.0"/>
+      <size width="234.0" height="90.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="f654bfe1-3029-430f-be59-b8f1a03dba08">
+      <element uuid="38dbdbc2-7421-4804-9cf4-afd44258e9d6" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>model_out</seg>
+        </bo>
+        <position x="366.0" y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="c1d223b4-dd02-49dd-97a2-ba16072adbc9" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>pointcloud_in</seg>
+        </bo>
+        <position y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="588bee4d-7ba4-40e1-bfd3-d5559fbd06fe">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>fpath</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_threedmodelgenerator</seg>
+      </bo>
+      <position x="1304.0" y="38.0"/>
+      <size width="451.0" height="90.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="d9f343a9-b249-4978-906e-516538c4ad1f">
+      <element uuid="6b678402-84f5-4652-84ab-5fc348bb85b7" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>result_in</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="aa736f1f-b5de-4c68-9bae-acc3f56d5cf4" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>resutl_out</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_threedmodelpostprocess</seg>
+      </bo>
+      <position x="1775.0" y="66.0"/>
+      <size width="413.0" height="110.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="d1e86f77-7c9d-49a7-b362-70dd22974c8c">
+      <element uuid="4445389c-dc65-4ac7-a974-15655932a241" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="226.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_uavnetwork</seg>
+      </bo>
+      <position x="12.0" y="66.0"/>
+      <size width="290.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="bbf2454e-dd24-4424-9508-ed9feef32dfa">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>pcatomodel : uav_modelconstructionsystem_impl_instance.this_pca.outport -> uav_modelconstructionsystem_impl_instance.this_threedmodelgenerator.pointcloud_in</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="c7903a3f-d6af-4959-abdb-82f9615d0223">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>pcntopca : uav_modelconstructionsystem_impl_instance.this_pcn.outport -> uav_modelconstructionsystem_impl_instance.this_pca.inport</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="1448c597-001f-4bb5-9ac9-7096d7927836">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>softtopcn : uav_modelconstructionsystem_impl_instance.this_soft.outport -> uav_modelconstructionsystem_impl_instance.this_pcn.inport</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="ed94e851-5738-4db9-8c44-c456a496b991">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>threedmodeltopost : uav_modelconstructionsystem_impl_instance.this_threedmodelgenerator.model_out -> uav_modelconstructionsystem_impl_instance.this_threedmodelpostprocess.result_in</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="1706d0dd-74b1-4d2b-b33c-36f00809e195">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>uavtosoft : uav_modelconstructionsystem_impl_instance.this_uavnetwork.outport -> uav_modelconstructionsystem_impl_instance.this_soft.inport</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw10_uav/uav_sysarch/aadl/product_modelconstruction/instances/uav_modelconstruction_uav_modelconstructionsystem_impl_instance.aaxl2</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="2200.0" height="244.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw10_uav/uav_sysarch/aadl/product_modelconstruction/instances/uav_modelconstruction_uav_modelconstructionsystem_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

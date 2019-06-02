@@ -1,0 +1,88 @@
+package UAVNode_V1
+--- This model represents a single UAV Node
+--- A single node comprises of the UAV itself with the Linux OS running on it and 
+--- A 3D camera attached and a point cloud generator 
+public
+	with Base_Types;
+
+	with UAVNode;
+
+	system UAVNodeComponent extends UAVNode::UAVNodeComponent
+	end UAVNodeComponent;
+
+	system implementation UAVNodeComponent.impl extends UAVNode::UAVNodeComponent.impl
+		subcomponents
+			this_uav: refined to device;
+			this_linuxOS: refined to process;
+			this_threeDCamera: device ThreeDCamera;
+			this_point_cloud_generator: process PCG;
+		connections
+			camera_UAV: port this_threeDCamera.camera_out -> this_uav.camera_in;
+	end UAVNodeComponent.impl;
+
+		--- ==================== device definitions ========================
+	device UAV
+		features
+			camera_in: in event data port;
+			data_out: out event data port;
+			goToLocation: in event data port Base_Types::Boolean;
+			stopFlying: in event data port Base_Types::Boolean;
+			inFlight: out event data port Base_Types::Boolean;
+				--- The UAV nodes can be in one of two states: InGround and InFlight
+				--- All pre-flight tasks such as location verification, battery status, etc.. will be handled by the InGround state.
+				--- InFlight state will deal with navigation to the specified location and recording required information among others
+		annex behavior_specification {**
+			states
+				InGround: initial state;
+				InFlight: state;
+			transitions
+				t1: InGround -[goToLocation ?= true]-> InFlight {inFlight := true};
+				t1: InFlight -[stopFlying ?= true]-> InGround {inFlight := false};
+		**};
+	end UAV;
+
+	process LinuxOS
+		features
+			data_in: in event data port;
+	end LinuxOS;
+
+	device ThreeDCamera
+		features
+			recordStatus: in data port Base_Types::Boolean;
+					--- The 3D camera can be in one of two states once switched on.
+					--- 1. The Idle state where no recording takes place. We display here, 
+					--- detailed status information such as battery and storage size remaining.
+					--- 2. The InRecording phase where the camera captures the target information.		
+			camera_out: out event data port;
+			startRecording: in event data port Base_Types::Boolean;
+			stopRecording: in event data port Base_Types::Boolean;
+		annex behavior_specification {**
+			states
+				Idle: initial state;
+				InRecording: state;
+			transitions
+				t1: Idle -[startRecording ?= true]-> InRecording {recordStatus := true};
+				t1: InRecording -[stopRecording ?= true]-> Idle {recordStatus := false};
+		**};
+	end ThreeDCamera;
+
+	process PCG
+		features
+			data_in: in event data port;
+			data_out: out event data port;
+	end PCG;
+
+		--- ==================== implementations ========================
+	device implementation UAV.impl
+	end UAV.impl;
+
+	process implementation LinuxOS.impl
+	end LinuxOS.impl;
+
+	device implementation ThreeDCamera.impl
+	end ThreeDCamera.impl;
+
+	process implementation PCG.impl
+	end PCG.impl;
+	
+end UAVNode_V1;

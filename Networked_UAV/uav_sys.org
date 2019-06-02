@@ -1,0 +1,11 @@
+organization UAVSystem
+stakeholder dev1[
+	full name "Sneha"
+]
+stakeholder dev2[
+	full name "Richard"
+]
+stakeholder architect[
+]
+stakeholder engineer[
+]

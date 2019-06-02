@@ -1,0 +1,20 @@
+package Software
+public
+	abstract SoftSys
+	end SoftSys;
+	
+	abstract implementation SoftSys.least
+		subcomponents
+			this_DV: abstract DataValidator;
+	end SoftSys.least;
+	
+	abstract DataValidator
+		properties
+			Stack_Size => 1000 Mbyte;
+			Period => 20 ms;
+			Compute_Execution_Time => 8 ms .. 10 ms;
+	end DataValidator;
+	
+	abstract implementation DataValidator.impl		
+	end DataValidator.impl;
+end Software;

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="37a12b9a-d58e-4319-9e35-a57e8ffc0967" manual="true">
+    <element uuid="50ca2799-ab9d-470a-aea3-6bfa7141d2da">
+      <element uuid="b64a4169-0efe-4f2f-b118-e3b82084e88b" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_out</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>this_agg</seg>
+      </bo>
+      <position x="68.0" y="38.0"/>
+      <size width="254.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="7a2ff7e1-286d-437e-bed4-cc114de9e0a2" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>inport</seg>
+      </bo>
+      <position y="10.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="9fdcee47-f457-4ba4-9af1-e688b7dd19e5" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>outport</seg>
+      </bo>
+      <position y="60.0"/>
+      <contentFilters/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw4_uav/models/instances/pointcloudaggregator_v1_pc_agg_impl_instance.aaxl2</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="398.0" height="110.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw4_uav/models/instances/pointcloudaggregator_v1_pc_agg_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

@@ -1,0 +1,49 @@
+package PointCloudAggregator
+public
+	with Base_Types;
+	
+	process PC_Agg
+		features
+			inPort: in data port Base_Types::Integer;
+			noOfInputClouds: in data port Base_Types::Integer;
+			aggregationCompleted: out event data port Base_Types::Boolean;
+			outPort: out data port Base_Types::Integer;
+		flows
+			fpath: flow path inPort -> outPort;
+		properties
+			latency => 20ms..30ms applies to fpath;
+		annex agree {**
+			assume "Input is a single point cloud network of max 100 point clouds" : inPort = 1;
+			guarantee "Output is the aggregation of all point clouds in the network" : outPort = 1;
+		**};
+		--- The Point Cloud Aggregator can be in one of two states: 
+		--- 1. Idle state - No aggregation takes place. System ready for aggregation tasks.
+		--- 2. InAggregation state - The system goes into InAggregation state only if there are 2 or more
+		--- point clouds inside the point cloud network. Once in this state, the component performs the aggregation
+		--- task.
+		annex behavior_specification {**
+			states
+				Idle: initial state;
+				InAggregation: state;
+			transitions
+				t1: Idle -[noOfInputClouds >= 2]-> InAggregation;
+				t1: InAggregation -[aggregationCompleted ?= true]-> Idle;
+		**};
+	end PC_Agg;
+	process implementation PC_Agg.impl
+		subcomponents
+			this_agg: subprogram FixedFrameGenerator;
+		annex agree {**
+			assert(outPort = 1);
+		**};
+		annex resolute {**
+			prove no_double_fanin()
+		**};
+	end PC_Agg.impl;
+	subprogram FixedFrameGenerator		
+		features
+			data_out:out event data port;			
+	end FixedFrameGenerator;
+	subprogram implementation FixedFrameGenerator.impl		
+	end FixedFrameGenerator.impl;
+end PointCloudAggregator;

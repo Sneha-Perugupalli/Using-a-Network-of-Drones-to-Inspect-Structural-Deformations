@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="89dd3255-cdfb-4373-bd16-956470a2b9a2" manual="true">
+    <element uuid="4d254549-15c5-4885-bd8d-7ef88ac8f995">
+      <element uuid="1f569e39-7e76-4bbc-a441-cce619add7de">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>pcatomodel</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="c68a580b-c216-495a-81ce-8426a5b13153">
+      <element uuid="64506604-5a5e-4faf-8c40-c44936a88ff0">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>pcntopca</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="16b771d5-84dc-4e64-88e5-a43dc96626b2">
+      <element uuid="ad84c49e-d112-4448-bd07-3fa1fee8eaf6">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>softtopcn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="a718f9e5-e89f-40bb-b8a7-0fc1fbdd01d5">
+      <element uuid="27f568f8-51e5-4bb7-83b1-c65d996d1e78">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>threedmodeltopost</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="815938f3-5116-46bb-a1ee-483dc69dde8a">
+      <element uuid="b90c0998-8380-48a0-81e3-195ed49b2f03">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>uavtosoft</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="d924e946-53c9-4a02-af98-f5f6fa5eb8f8">
+      <element uuid="1c1c8b8c-496b-4005-a08f-32a3624841ae" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>aggregationcompleted</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="9d983a4f-85ce-4853-b885-11ad7a51e231" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>inport</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="1a2d962f-5713-4070-bf15-e4435a768a59" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>noofinputclouds</seg>
+        </bo>
+        <position y="110.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="c916168d-0ef8-436e-be09-b0b42c51e89c" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="390.0" y="60.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_pca</seg>
+      </bo>
+      <position x="851.0" y="38.0"/>
+      <size width="454.0" height="160.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="a814eddf-9510-4fff-b5d7-a88f868ca55e">
+      <element uuid="55b3ba19-dc46-4a42-bf1a-ecfd1acdaa14" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>inport</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="0b5abe9c-7311-4195-a33f-33c8d510854d" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="180.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_pcn</seg>
+      </bo>
+      <position x="587.0" y="38.0"/>
+      <size width="244.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="9db1206d-2bb2-426e-b69b-4a3d43cd70c7">
+      <element uuid="537043bf-9377-4971-983b-2a44cc7b3424" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>inport</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="53d0d229-1125-4328-9cce-c80c0b744bc7" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="175.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_soft</seg>
+      </bo>
+      <position x="328.0" y="38.0"/>
+      <size width="239.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="0420f568-300d-4ab9-abb2-868657811866">
+      <element uuid="20098f41-7e75-406c-99bc-d6469507a192" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>model_out</seg>
+        </bo>
+        <position x="372.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="785f3287-c26e-44d0-95ca-bf9c28b86ea5" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>pointcloud_in</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_threedmodelgenerator</seg>
+      </bo>
+      <position x="1325.0" y="88.0"/>
+      <size width="457.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="df2ad079-b9df-4567-a7e8-85cd037120c1">
+      <element uuid="d8a23600-a9c1-4859-bbc4-014ae46e1faa" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>result_in</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="0722c516-6ff6-4a9a-9da8-8a9f37cd016c" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>resutl_out</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_threedmodelpostprocess</seg>
+      </bo>
+      <position x="1802.0" y="88.0"/>
+      <size width="419.0" height="110.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="382f0546-a68a-4a08-ab9c-b875e4be5f9d">
+      <element uuid="cee5e652-334e-4dae-8514-0ffd4af75443" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>outport</seg>
+        </bo>
+        <position x="232.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>this_uavnetwork</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="296.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>uav_modelconstructionsystem.impl</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="2233.0" height="210.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>uav_modelconstruction::uav_modelconstructionsystem.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

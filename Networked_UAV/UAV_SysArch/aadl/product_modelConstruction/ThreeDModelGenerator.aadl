@@ -1,0 +1,26 @@
+package ThreeDModelGenerator
+public	
+	with Base_Types;
+	
+	process ThreeDModelGeneratorC
+		features
+			pointCloud_in: in data port Base_Types::Integer;
+			model_out: out data port Base_Types::Integer;
+		flows
+			fpath: flow path pointCloud_in -> model_out;
+		properties
+			latency => 10ms..20ms applies to fpath;
+		annex agree {**
+			assume "Input - A single aggregated, post-processed point cloud": pointCloud_in = 1;
+			guarantee "A 3D mesh represenatation of the point cloud": model_out = 1;
+		**};
+	end ThreeDModelGeneratorC;
+	process implementation ThreeDModelGeneratorC.impl		
+		annex agree {**
+			assert(model_out = 1);
+		**};
+		annex resolute {**
+			prove no_double_fanin()
+		**};
+	end ThreeDModelGeneratorC.impl;
+end ThreeDModelGenerator;

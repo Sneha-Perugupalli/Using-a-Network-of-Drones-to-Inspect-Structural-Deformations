@@ -1,0 +1,19 @@
+package UAVNetwork
+--- This model represents a network of UAVNodes. 
+--- UAVNode is defined in a separate module.
+public
+	--- Importing the UAVNode module
+	with UAVNode;
+	
+	abstract UAVNetworkC						
+	end UAVNetworkC;
+	
+	abstract implementation UAVNetworkC.impl
+		subcomponents
+			this_node1: system UAVNode::UAVNodeComponent;
+			this_node2: system UAVNode::UAVNodeComponent;
+			this_node3: system UAVNode::UAVNodeComponent;
+			this_node4: system UAVNode::UAVNodeComponent;
+	end UAVNetworkC.impl;
+		
+end UAVNetwork;

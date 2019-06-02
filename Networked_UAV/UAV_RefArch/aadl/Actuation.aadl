@@ -1,0 +1,22 @@
+package Actuation
+public
+	abstract Actuator		
+		features
+			eIN: in event data port;
+			eOut: out event data port;
+	end Actuator;
+	abstract implementation Actuator.impl
+		subcomponents
+			this_scu: abstract ServoControlUnit;
+	end Actuator.impl;
+	--- subcomponent definitions
+	--- Most drones will use some sort of servos for motion
+	abstract ServoControlUnit
+	end ServoControlUnit;
+	abstract implementation ServoControlUnit.impl
+		subcomponents
+			this_servos: abstract Servos;
+	end ServoControlUnit.impl;
+	abstract Servos
+	end Servos;	
+end Actuation;

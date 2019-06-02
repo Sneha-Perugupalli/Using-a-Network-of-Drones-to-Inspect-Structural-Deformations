@@ -1,0 +1,17 @@
+package RefMain
+public
+	with Communication;
+
+	with UAVNodeMain;
+
+	abstract RefArchMain
+	end RefArchMain;
+
+	abstract implementation RefArchMain.impl
+		subcomponents
+			this_node: abstract UAVNodeMain::UAVNodeM;
+			this_comm: abstract Communication::CommunicationInterface;
+		connections
+			nToC: port this_node.main_out -> this_comm.data_in;
+	end RefArchMain.impl;
+end RefMain;

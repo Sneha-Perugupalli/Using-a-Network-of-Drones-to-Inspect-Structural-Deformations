@@ -1,0 +1,29 @@
+package UAVNodeMain
+public
+	with UAVNode_Vehicle;
+
+	with CoreSoftware;
+
+	with FlightController;
+
+	with Actuation;
+
+	abstract UAVNodeM
+		features
+			main_out: out event data port;
+	end UAVNodeM;
+
+	abstract implementation UAVNodeM.impl
+		subcomponents
+			this_vehicle: system UAVNode_Vehicle::UAVVehicle;
+			this_FC: abstract FlightController::FlightControl;
+			this_coreSoft: abstract CoreSoftware::CoreSW;
+			this_act: abstract Actuation::Actuator;
+		connections
+			vToS: port this_vehicle.state_out -> this_coreSoft.stateIn;
+			sToC: port this_coreSoft.stateOut -> this_FC.dIn;
+			CtoS: port this_FC.dOut -> this_coreSoft.stateIn;
+			CtoA: port this_FC.dOut -> this_act.eIN;
+			AtoV: port this_act.eOut -> this_vehicle.data_in;
+	end UAVNodeM.impl;		
+end UAVNodeMain;

@@ -1,0 +1,15 @@
+system requirements uavModelConstReqs for UAVNode::UAVNodeComponent[
+	requirement UAV: "UAV"
+	[
+		description this "Every system should have a certain number of UAV devices that can be networked together"
+		rationale "Carry out the task much faster and more efficiently than using a single node"
+	]
+	
+	requirement Storage: "Storage"
+	[
+		description this "The system should have enough storage capabilities including handling raw video output"
+		rationale "Data could be lost or corrupted"
+		mitigates "Partial Input and Incorrect results"
+		see goal UAVSystemGoals.g1
+	]
+]

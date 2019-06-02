@@ -1,0 +1,30 @@
+system requirements softReqs for Software::SoftSys [
+	requirement CameraAPI: "API for camera related tasks"	
+	[
+		description this "Should provide a sophisticated and a rich camera API including video capture and frame isolation tasks"
+		rationale "Almost every drone system will need to carry out some computer vision related task"
+		mitigates "Inaccurate results or prediction"
+		see goal UAVSystemGoals.g1
+	]
+	requirement SystemMonitoringAPI: "API for monitoring system health and status"	
+	[
+		description this "Should provide a complete and a rich API that can be used to get system health and status related queries"
+		rationale "High level / Third party software will want to know system status such as internet connectivity and battery status"
+		mitigates "Need for third party software to write kernel level code"
+		see goal UAVSystemGoals.g1
+	]
+	requirement UAVCoordinationProcess: "Process that coordinates the UAVs"	
+	[
+		description this "There should be a separate process that handles UAV coordination"
+		rationale "Each product in the product line will involve coordination among a network of drones to carry out a certain task"
+		mitigates "Two or more UAV's doing the same sub task"
+		see goal UAVSystemGoals.g1
+	]
+	requirement UAVCommunicationProtocol: "Protocol for communication among UAV nodes"	
+	[
+		description this "Protocol specifying how communication among the UAV nodes are carried out"
+		rationale "A standard way to communicate irrespective of the product in the product line"
+		mitigates "Data communication issues"
+		see goal UAVSystemGoals.g1
+	]
+]

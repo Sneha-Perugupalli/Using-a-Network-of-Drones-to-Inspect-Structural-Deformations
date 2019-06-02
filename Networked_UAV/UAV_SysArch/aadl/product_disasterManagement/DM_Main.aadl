@@ -1,0 +1,21 @@
+package DM_Main
+public
+	with UAVNetwork_V2;
+
+	with Software_V2;
+
+	with BaseStation;
+
+	system DisasterManagementMain
+	end DisasterManagementMain;
+
+	system implementation DisasterManagementMain.impl
+		subcomponents
+			this_UAVNetwork: system UAVNetwork_V2::UAVNetworkC;
+			this_soft: process Software_V2::SoftSys;
+			this_comm: system BaseStation::BaseStat;
+		connections
+			UAVToSoft: port this_UAVNetwork.outPort -> this_soft.inPort;
+			SoftToPCN: port this_soft.outPort -> this_comm.inPort;
+	end DisasterManagementMain.impl;
+end DM_Main;

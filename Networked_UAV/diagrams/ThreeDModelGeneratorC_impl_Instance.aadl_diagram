@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="21da244e-ef76-4ff0-bfed-cb512f4515d7" manual="true">
+    <element uuid="df45185e-3482-4627-b586-323ea1a65460" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>model_out</seg>
+      </bo>
+      <position y="10.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="8cb7ab59-c11d-4dbe-9b38-418fa8094aeb" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>pointcloud_in</seg>
+      </bo>
+      <position y="60.0"/>
+      <contentFilters/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw4_uav/models/instances/threedmodelgenerator_threedmodelgeneratorc_impl_instance.aaxl2</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="540.0" height="110.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/hw4_uav/models/instances/threedmodelgenerator_threedmodelgeneratorc_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

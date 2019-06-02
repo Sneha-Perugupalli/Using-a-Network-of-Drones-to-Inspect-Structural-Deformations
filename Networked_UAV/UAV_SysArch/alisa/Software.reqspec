@@ -1,0 +1,20 @@
+system requirements softReqs for Software_V1::SoftSys [
+	requirement SupplyServices: "Faster Data collection"
+	[
+		description this "Should support fast data collection from a set of stereo video cameras"
+		rationale "Input of data from UAV network"
+		mitigates "Halt of data or sync between components"
+		see goal UAVSystemGoals.ng1
+	]
+	requirement DataValidation: "Data Validation"
+	[
+		description this "Should provide clean, correct and useful information without noise"
+		rationale "To make informed decisions and decisive actions"
+		mitigates "Risk to input insecure data into the system"
+	]
+	requirement Scheduling: "Scheduling"
+	[
+		description this "Performance-critical computations should be given priority"
+        rationale "To ensure the achievement of the timing deadline"
+	]
+]

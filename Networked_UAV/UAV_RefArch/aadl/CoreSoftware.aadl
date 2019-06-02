@@ -1,0 +1,34 @@
+package CoreSoftware
+public
+	abstract CoreSW				
+		features
+			stateIn: in event data port;
+			stateOut: out event data port;
+	end CoreSW;
+	abstract implementation CoreSW.impl
+		subcomponents
+			this_state: abstract StateMachine;
+	end CoreSW.impl;
+	--- Each drone will ideally maintain a state machine to keep track of the 
+	--- system's states
+	abstract StateMachine
+		features
+			state_up: in event data port;
+			state_out: out event data port;
+	end StateMachine;
+	abstract implementation StateMachine.impl
+		subcomponents			
+			this_acc: abstract Accelerometer;
+			this_compass: abstract Compass;
+			this_gps: abstract GPS;
+			this_camera: abstract Camera;
+	end StateMachine.impl;
+	abstract Accelerometer		
+	end Accelerometer;
+	abstract Compass
+	end Compass;
+	abstract GPS		
+	end GPS;
+	abstract Camera		
+	end Camera;
+end CoreSoftware;

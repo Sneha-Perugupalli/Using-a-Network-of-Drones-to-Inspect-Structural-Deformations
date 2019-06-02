@@ -1,0 +1,25 @@
+package ThreeDMesh
+public
+	
+	with Base_Types;
+
+	process ThreeDMeshModelPostProcessor
+		features
+			resutl_out: out data port Base_Types::Integer;
+			result_in: in event data port Base_Types::Integer;
+		annex agree {**
+			assume "Input - generated 3D mesh": result_in = 1;
+			guarantee "3D mesh with post procesing effects applied": resutl_out = 1;
+		**};
+	end ThreeDMeshModelPostProcessor;
+
+	process implementation ThreeDMeshModelPostProcessor.impl
+		annex agree {**
+			eq k : int = 1 -> if (pre(k) >= 2) then 1 else 1;
+			assert(resutl_out = k);
+		**};
+		annex resolute {**
+			prove no_double_fanin()
+		**};
+	end ThreeDMeshModelPostProcessor.impl;
+end ThreeDMesh;

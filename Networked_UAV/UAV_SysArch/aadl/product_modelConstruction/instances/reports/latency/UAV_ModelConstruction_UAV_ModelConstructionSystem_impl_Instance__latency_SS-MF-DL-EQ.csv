@@ -1,0 +1,30 @@
+Latency analysis with preference settings: synchronous system/major partition frame/worst case as deadline/best case as empty queue
+
+Latency results for end-to-end flow 'f1' of system 'UAV_ModelConstructionSystem.impl',
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments,
+process this_PCN,20.0ms,20.0ms,specified,30.0ms,30.0ms,specified,
+connection this_PCN.outPort -> this_PCA.inPort,,0.0ms,no latency,,0.0ms,no latency,
+process this_PCA,20.0ms,20.0ms,specified,30.0ms,30.0ms,specified,
+Latency Total,40.0ms,40.0ms,,60.0ms,60.0ms,,
+Specified End To End Latency,,1000.0ms,,,4000.0ms,,
+End to end Latency Summary,
+WARNING,Minimum specified flow latency total 40.0ms less than expected minimum end to end latency 1000.0ms (better response time),
+WARNING,Minimum actual latency total 40.0ms less than expected minimum end to end latency 1000.0ms (faster actual minimum response time),
+INFO,Maximum actual latency total 60.0ms is less or equal to expected maximum end to end latency 4000.0ms,
+
+
+
+Latency results for end-to-end flow 'f2' of system 'UAV_ModelConstructionSystem.impl',
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments,
+process this_PCA,20.0ms,20.0ms,specified,30.0ms,30.0ms,specified,
+connection this_PCA.outPort -> this_threeDModelGenerator.pointCloud_in,,0.0ms,no latency,,0.0ms,no latency,
+process this_threeDModelGenerator,10.0ms,10.0ms,specified,20.0ms,20.0ms,specified,
+Latency Total,30.0ms,30.0ms,,50.0ms,50.0ms,,
+Specified End To End Latency,,0.0ms,,,0.0ms,,
+End to end Latency Summary,
+WARNING,Expected end to end latency is not specified,
+
+
+

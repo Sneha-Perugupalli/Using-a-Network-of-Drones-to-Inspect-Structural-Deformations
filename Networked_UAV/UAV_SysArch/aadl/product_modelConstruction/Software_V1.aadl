@@ -1,0 +1,50 @@
+package Software_V1
+public
+	with Software;
+	
+	with Base_Types;
+	
+	process SoftSys extends Software::SoftSys
+		features
+			inPort: in data port Base_Types::Integer;
+			outPort: out data port Base_Types::Integer;
+		flows
+			fpath: flow path inPort -> outPort;
+		properties
+			latency => 20ms..30ms applies to fpath;
+		annex agree {**
+				assume "Input - raw spatial data": inPort = 1;
+				guarantee "A processed point cloud genereated fromt the input spatial data": outPort = 1;
+		**};
+	end SoftSys;
+
+	process implementation SoftSys.least extends Software::SoftSys.least
+		subcomponents
+			this_DV: refined to thread;
+			this_PCG: thread PointCloudGenerator;
+		annex agree {**
+			eq k : int = 1 -> if (pre(k) >= 2) then 1 else 1;
+			assert(outPort = k);
+		**};
+	end SoftSys.least;
+
+	thread PointCloudGenerator
+		properties
+			Stack_Size => 1000 Mbyte;
+			Period => 20ms;
+			Compute_Execution_Time => 10ms .. 12ms;
+	end PointCloudGenerator;
+
+	thread DataValidator
+		properties
+			Stack_Size => 1000 Mbyte;
+			Period => 20ms;
+			Compute_Execution_Time => 8ms .. 10ms;
+	end DataValidator;
+
+	thread implementation DataValidator.impl
+	end DataValidator.impl;
+
+	thread implementation PointCloudGenerator.impl
+	end PointCloudGenerator.impl;
+end Software_V1;

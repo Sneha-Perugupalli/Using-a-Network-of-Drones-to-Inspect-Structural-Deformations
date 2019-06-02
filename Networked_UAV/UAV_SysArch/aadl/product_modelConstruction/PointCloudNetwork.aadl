@@ -1,0 +1,30 @@
+package PointCloudNetwork
+public
+	with Base_Types;
+
+	with PointCloud;
+
+	process PCN
+		features
+			inPort: in data port Base_Types::Integer;
+			outPort: out data port Base_Types::Integer;
+		flows
+			fpath: flow path inPort -> outPort;
+		properties
+			latency => 20ms..30ms applies to fpath;
+		annex agree {**
+			assume "Input of max 100 point clouds": inPort < 100;
+			guarantee "A single point cloud network with a max 100 point clouds": outPort = 1;**};
+	end PCN;
+
+	process implementation PCN.least
+		subcomponents
+			this_pc1: data PointCloud::PointCloudData;
+			this_pc2: data PointCloud::PointCloudData;
+			this_pc3: data PointCloud::PointCloudData;
+			this_pc4: data PointCloud::PointCloudData;
+		annex agree {**
+			eq k : int = 1 -> if (pre(k) >= 2) then 1 else 1;
+			assert(outPort = k);**};
+	end PCN.least;		
+end PointCloudNetwork;

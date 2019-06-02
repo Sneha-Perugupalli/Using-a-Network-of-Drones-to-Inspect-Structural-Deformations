@@ -1,0 +1,37 @@
+--- 
+--- Reference: https://github.com/osate/examples/blob/master/core-examples/resolute/theorems.aadl
+---
+
+package allRules
+
+public
+	
+annex resolute {**
+	isGood(p : component) <=
+  		** " Check threads in component " p **
+		forall(t : thread). contained(t, p) => check_thread (t)
+
+	check_thread(t : thread) <=
+  	** "The thread " t " as a foobar bigger than 15"  **
+  		(has_property (t, resoluteps::genInt)) and 
+  		(property (t, resoluteps::genInt) > 15)
+
+	no_double_fanin() <=
+  		** " All incoming feature have only one connection" **
+		forall (c : component) . true => has_single_fanin (c)
+ 
+
+	has_single_fanin (comp : component) <=
+		** " All incoming feature have only one connection on " comp **
+		forall (f : features (comp)) . (direction(f) = "in") => (length (connections (f)) = 1) 
+
+
+	minCompValue(c : component) <=
+  		** " Check the minimum foobar for features on " c  **
+		forall (conn : connections (c)) . has_property (source(conn), resoluteps::genInt) and
+		                                  has_property (destination(conn), resoluteps::genInt) => 
+		(property(source(conn), resoluteps::genInt) < property(destination(conn), resoluteps::genInt))	
+			
+**};
+	
+end allRules;

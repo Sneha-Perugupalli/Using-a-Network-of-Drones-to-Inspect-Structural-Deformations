@@ -1,0 +1,29 @@
+package UAVNetwork_V1
+--- This model represents a network of UAVNodes. 
+--- UAVNode is defined in a separate module.
+public
+	--- Importing the UAVNode module
+	with UAVNetwork;
+	with Base_Types;
+	
+	system UAVNetworkC extends UAVNetwork::UAVNetworkC
+		features
+			outPort: out event data port Base_Types::Integer;
+		annex agree {**
+			guarantee "Output - a max of 100 point clouds": outPort >= 1 and outPort < 100;
+		**};
+	end UAVNetworkC;
+
+	system implementation UAVNetworkC.impl extends UAVNetwork::UAVNetworkC.impl
+		subcomponents
+			this_node1: refined to system;
+			this_node2: refined to system;
+			this_node3: refined to system;
+			this_node4: refined to system;
+		annex agree {**
+			eq k : int = 1 -> if (pre(k) > 100) then 100 else pre(k);
+			assert(outPort = k);
+		**};
+	end UAVNetworkC.impl;
+		
+end UAVNetwork_V1;

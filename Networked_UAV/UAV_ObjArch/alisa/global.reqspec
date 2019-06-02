@@ -1,0 +1,7 @@
+global requirements globalreqspec
+[
+	requirement connected : "All features/sub-components of a component are connected" [
+		description "Each component is made up of several sub-components. All sub-components of a component should be connected."
+		development stakeholder UAVSystem.dev1 UAVSystem.dev2
+	]
+]	

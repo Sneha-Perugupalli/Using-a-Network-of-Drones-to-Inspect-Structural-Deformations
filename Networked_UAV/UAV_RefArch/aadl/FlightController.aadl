@@ -1,0 +1,18 @@
+package FlightController
+public
+	abstract FlightControl		
+		features
+			dIn: in event data port;
+			dOut: out event data port;
+	end FlightControl;
+	abstract implementation FlightControl.impl
+		subcomponents
+			this_mc: abstract MainController;
+			this_di: abstract DataLinkInterface;
+	end FlightControl.impl;
+	--- Flight controller will have the following as sub controllers
+	abstract MainController		
+	end MainController;
+	abstract DataLinkInterface		
+	end DataLinkInterface;
+end FlightController;

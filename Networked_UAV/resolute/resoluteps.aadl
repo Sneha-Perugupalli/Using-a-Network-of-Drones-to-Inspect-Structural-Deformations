@@ -1,0 +1,12 @@
+property set resoluteps is
+	genInt : aadlinteger applies to (all);
+	
+	required_int : constant aadlinteger => 15;
+	
+  	myrec : resoluteps::myrecord applies to (all);
+        
+    myrecord : type record (
+		int1 : aadlinteger;
+		int2: aadlinteger;
+    );
+end resoluteps;   

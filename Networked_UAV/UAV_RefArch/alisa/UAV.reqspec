@@ -1,0 +1,16 @@
+system requirements comm for Communication::CommunicationInterface [
+	requirement Communication: "Communication"
+	[
+		description this "The system should allow secure communication between the several elements involved with a latency not more than 500ms"
+		rationale "Enable components to interact with each other"
+		mitigates "Data might not move from one component to another"
+	]
+	
+	requirement ReliableDataTransfer: "Reliable data transfer"
+	[
+		description this "The system should allow reliable data transfer and should combat any data losses that can occur"
+		rationale "Data losses might lead to incorrect results"
+		mitigates "Incorrect results"
+		see goal UAVSystemGoals.ng2
+	]
+]

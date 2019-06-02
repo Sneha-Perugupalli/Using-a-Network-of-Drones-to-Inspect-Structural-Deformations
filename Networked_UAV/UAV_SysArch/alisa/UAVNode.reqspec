@@ -1,0 +1,49 @@
+system requirements uavNodeReqs for UAVNode_V1::UAVNodeComponent [
+	requirement DataCapture: "Data Capture"
+	[
+		description this "Each node should capture the data at a frame rate of 24fps"
+		rationale "Will lead to better static frames when computing the point cloud"
+		mitigates "Blurred frames"
+	]
+	requirement MultiFunctionalOS: "Multi-Functional OS"
+	[
+		description this "Each node should have a robust multi functional OS"
+		rationale "Will help the drone to perform multiple operations such as video capture, navigation and data transfer"
+		mitigates "Multiple run-times"
+	]
+	requirement Navigation: "Navigation"
+	[
+		description this "Each node should be able to autonomously navigate to the assigned location"
+		rationale "Will help remove the need for any human intervention in the data collection process"
+		mitigates "Human effort"
+	]
+	requirement Supply_services: "Provide a real-time view"
+	[
+		description this "Should use perspective and 360° panoramas to provide a real-time view"
+		rationale "Full image of the territory to teams planning logistics for next steps"
+		mitigates "Improper planning"
+	]
+	requirement Weight : "UAV weight limit" [
+		val MaximumWeight = 3 kg
+		compute actualweight : real units SEI::WeightUnits 
+		description this "Should be within weight of " MaximumWeight 
+		value predicate actualweight <= MaximumWeight
+	]
+	requirement Battery : "UAV battery life" [
+		val w1 = 450 W
+		description this" Should have this min battery requirement to work without any control lag and to fly for around 20 mins"
+	]
+	requirement Response : "UAV sensor to actuator response time limit" [
+		val MaximumLatency = 30ms
+		val ExpectedLatencyRange = [10ms..30ms]
+		val ExpectedMaximumLatency = 20 ms
+		compute MinLatency : Time
+		compute MaxLatency : Time
+		description this "Shall have a sensor to actuator response time within " MaximumLatency
+		value predicate MaxLatency <= ExpectedMaximumLatency
+	]
+	requirement FrameRate: "Frame rate" [
+		val rate = 24
+		value predicate rate <= #UAVPC::MaxFrameRate
+	]
+]

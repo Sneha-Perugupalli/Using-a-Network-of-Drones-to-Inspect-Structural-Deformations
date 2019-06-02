@@ -1,0 +1,20 @@
+package UAVNode_Vehicle
+-- Represents an abstract reference drone vehicle
+public
+	system UAVVehicle		
+		features
+			data_in: in event data port;
+			state_out: out event data port;
+	end UAVVehicle;
+	system implementation UAVVehicle.impl
+		subcomponents
+			this_CPU: abstract CPU;
+			this_GPU: abstract GPU;
+	end UAVVehicle.impl;
+	--- The subcomponents - CPU
+	abstract CPU		
+	end CPU;
+	--- The subcomponents - GPU
+	abstract GPU
+	end GPU;
+end UAVNode_Vehicle;
